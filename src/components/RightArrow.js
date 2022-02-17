@@ -1,4 +1,5 @@
 import React from 'react';
+import './RightArrow.module.css';
 
 const RightArrow = (props) => {
   const { onClick } = props;

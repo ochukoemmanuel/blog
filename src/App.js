@@ -8,6 +8,7 @@ import { Routes, Route } from 'react-router-dom';
 import Dropdown from './components/Dropdown';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Single from './pages/Single';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,6 +37,7 @@ function App() {
       <Dropdown className='absolute' isOpen={isOpen} toggle={toggle} />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/single/:id' element={<Single />} />
         <Route path='/contact' element={<Contact />} />
         <Route
           path='/*'
