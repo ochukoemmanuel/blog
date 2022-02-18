@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import song1 from '../images/song1.jpg';
 
-const Single = () => {
+const Single = ({ Nav }) => {
+  Nav();
   return (
     <div className='container flex flex-col md:flex-row space-x-9 py-9 mt-6 lg:mt-9 px-5 lg:px-0'>
       <div className='flex-1'>

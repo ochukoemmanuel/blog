@@ -9,9 +9,11 @@ import Dropdown from './components/Dropdown';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Single from './pages/Single';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
+  const [Nav, setNav] = useState(true);
 
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -33,12 +35,19 @@ function App() {
 
   return (
     <>
-      <Navbar toggle={toggle} />
+      {!Nav ? <></> : <Navbar toggle={toggle} />}
       <Dropdown className='absolute' isOpen={isOpen} toggle={toggle} />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/single/:id' element={<Single />} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path='/' element={<Home Nav={() => setNav(true)} />} />
+        <Route
+          path='/dashboard'
+          element={<Dashboard Nav={() => setNav(false)} />}
+        />
+        <Route
+          path='/single/:id'
+          element={<Single Nav={() => setNav(true)} />}
+        />
+        <Route path='/contact' element={<Contact Nav={() => setNav(true)} />} />
         <Route
           path='/*'
           element={
