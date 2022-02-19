@@ -47,6 +47,10 @@ function App() {
           path='/single/:id'
           element={<Single Nav={() => setNav(true)} />}
         />
+        <Route
+          path='/search/:id'
+          element={<Single Nav={() => setNav(true)} />}
+        />
         <Route path='/contact' element={<Contact Nav={() => setNav(true)} />} />
         <Route
           path='/*'

@@ -4,6 +4,7 @@ import song2 from '../images/song2.png';
 import song3 from '../images/song3.jpg';
 import { Link } from 'react-router-dom';
 import Sidebar from './Sidebar';
+import Pagination from './Pagination';
 
 const Releases = () => {
   const releases = [
@@ -54,6 +55,8 @@ const Releases = () => {
               </div>
             </div>
           ))}
+
+          <Pagination />
         </div>
 
         <div className='bg-blog-lightgrey w-0.5'></div>
