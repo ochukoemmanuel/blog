@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Dropdown = ({ isOpen, toggle }) => {
+  const [searchTerm, setSearchTerm] = useState();
+  const search = (e) => {
+    setSearchTerm(e);
+  };
+
   return (
     <div
       className={
@@ -14,7 +20,10 @@ const Dropdown = ({ isOpen, toggle }) => {
           className='text-lg font-medium w-full px-8 outline-none bg-white'
           placeholder='Search'
         />
-        <div className='bg-blog-darkgrey p-3 cursor-pointer hover:bg-blog-lightgrey transition duration-300'>
+        <Link
+          to={`search/${searchTerm}`}
+          className='bg-blog-darkgrey p-3 cursor-pointer hover:bg-blog-lightgrey transition duration-300'
+        >
           <svg
             className='w-6 h-6'
             fill='currentColor'
@@ -27,7 +36,7 @@ const Dropdown = ({ isOpen, toggle }) => {
               clipRule='evenodd'
             />
           </svg>
-        </div>
+        </Link>
       </div>
     </div>
   );

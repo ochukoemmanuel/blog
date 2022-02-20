@@ -8,33 +8,35 @@ import img5 from '../images/img5.jpg';
 const Hero = () => {
   return (
     //Hero
-    <div className='md:container flex justify-center flex-col md:flex-row lg:flex-row items-center gap-5 mt-6 lg:mt-9 bg-blog-black text-white py-9'>
+    <div className='md:container flex justify-center flex-col lg:flex-row items-center gap-5 lg:mt-9 bg-blog-black px-9 lg:px-0 text-white py-9'>
       <div className='flex items-center -space-x-3'>
         <div
           style={{ backgroundImage: `url(${img1})` }}
-          className='w-14 h-14 md:w-24 md:h-24 overflow-hidden rounded-full bg-center bg-no-repeat bg-cover cursor-pointer'
-        >
-          {/* <img src={img1} className='w-72' alt='img' /> */}
-        </div>
-        <div className='z-10 w-16 h-16 md:w-28 md:h-28 overflow-hidden rounded-full bg-center bg-no-repeat bg-cover cursor-pointer'>
+          className='w-14 h-14 md:w-24 md:h-24 overflow-hidden rounded-full bg-center bg-no-repeat bg-cover '
+        ></div>
+        <div className='z-10 w-16 h-16 md:w-28 md:h-28 overflow-hidden rounded-full bg-center bg-no-repeat bg-cover '>
           <img src={img2} className='w-72' alt='img' />
         </div>
-        <div className='z-20 w-20 h-20 md:w-32 md:h-32 overflow-hidden rounded-full bg-center bg-no-repeat bg-cover cursor-pointer'>
+        <div className='z-20 w-20 h-20 md:w-32 md:h-32 overflow-hidden rounded-full bg-center bg-no-repeat bg-cover '>
           <img src={img3} className='w-72' alt='img' />
         </div>
-        <div className='z-10 w-16 h-16 md:w-28 md:h-28 overflow-hidden rounded-full bg-center bg-no-repeat bg-cover cursor-pointer'>
+        <div className='z-10 w-16 h-16 md:w-28 md:h-28 overflow-hidden rounded-full bg-center bg-no-repeat bg-cover '>
           <img src={img4} className='w-72' alt='img' />
         </div>
-        <div className='w-14 h-14 md:w-24 md:h-24 overflow-hidden rounded-full bg-center bg-no-repeat bg-cover cursor-pointer'>
+        <div className='w-14 h-14 md:w-24 md:h-24 overflow-hidden rounded-full bg-center bg-no-repeat bg-cover '>
           <img src={img5} className='w-72' alt='img' />
         </div>
       </div>
 
-      <div className='flex flex-col items-center text-left'>
-        <h2 className='text-3xl font-bold md:text-4 text-center lg:text-left mb-3'>
+      <div className='flex flex-col items-center text-left '>
+        <h2 className='font-bold text-xl md:text-3xl text-center lg:text-left mb-3'>
           Top music artist for you
         </h2>
-        <p className='text-bookmark-grey text-lg text-center lg:text-left mb-6'>
+        <p className='block md:hidden text-bookmark-grey text-sm md:text-lg text-center lg:text-left mb-6'>
+          We will create an experience
+          <br /> just for you
+        </p>
+        <p className='hidden md:block text-bookmark-grey text-sm md:text-lg text-left mb-6'>
           We will create an experience just for you
         </p>
       </div>

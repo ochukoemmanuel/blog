@@ -10,6 +10,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Single from './pages/Single';
 import Dashboard from './pages/Dashboard';
+import Search from './pages/Search';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,11 +32,11 @@ function App() {
     return () => {
       window.removeEventListener('resize', hideMenu);
     };
-  });
+  }, [isOpen]);
 
   return (
     <>
-      {!Nav ? <></> : <Navbar toggle={toggle} />}
+      {!Nav ? null : <Navbar toggle={toggle} isOpen={isOpen} />}
       <Dropdown className='absolute' isOpen={isOpen} toggle={toggle} />
       <Routes>
         <Route path='/' element={<Home Nav={() => setNav(true)} />} />
@@ -48,8 +49,8 @@ function App() {
           element={<Single Nav={() => setNav(true)} />}
         />
         <Route
-          path='/search/:id'
-          element={<Single Nav={() => setNav(true)} />}
+          path='/search/:term'
+          element={<Search Nav={() => setNav(true)} />}
         />
         <Route path='/contact' element={<Contact Nav={() => setNav(true)} />} />
         <Route

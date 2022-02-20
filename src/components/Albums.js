@@ -77,7 +77,7 @@ const Albums = () => {
                 key={i}
                 className='w-full md:w-full md:h-full md:-ml-6 outline-none'
               >
-                <Link to='/single/1'>
+                <Link to='/album/album'>
                   <img
                     key={i}
                     className='img md:w-52 md:mx-6'
@@ -85,12 +85,12 @@ const Albums = () => {
                     alt=''
                   />
                 </Link>
-                <Link to='/single/1'>
+                <Link to='/album/album'>
                   <div className='mt-4 font-medium text-base md:text-lg md:mx-6'>
                     {img.title}
                   </div>
                 </Link>
-                <Link to='/single/1'>
+                <Link to='/album/album'>
                   <p className='text-bookmark-grey md:mx-6'>{img.desc}</p>
                 </Link>
               </div>

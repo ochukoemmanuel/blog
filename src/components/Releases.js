@@ -40,17 +40,17 @@ const Releases = () => {
           {releases.map((release, i) => (
             <div key={i} className='md:flex items-center gap-x-9'>
               <div className='w-full h-full md:w-60 md:h-60 mb-9 md:mb-0'>
-                <Link to='/'>
+                <Link to='/single/track'>
                   <img className='w-full' src={release.img} alt='' />
                 </Link>
               </div>
 
               <div className='flex flex-1 flex-col'>
                 <div className='text-lg md:text-xl font-medium'>
-                  <Link to='/'>{release.title}</Link>
+                  <Link to='/single/track'>{release.title}</Link>
                 </div>
                 <p className='text-bookmark-grey mt-4'>
-                  <Link to='/'>{release.desc}</Link>
+                  <Link to='/single/track'>{release.desc}</Link>
                 </p>
               </div>
             </div>
