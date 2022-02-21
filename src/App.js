@@ -11,6 +11,8 @@ import 'slick-carousel/slick/slick-theme.css';
 import Single from './pages/Single';
 import Dashboard from './pages/Dashboard';
 import Search from './pages/Search';
+import Album from './pages/Album';
+import Track from './pages/Track';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,6 +49,14 @@ function App() {
         <Route
           path='/single/:id'
           element={<Single Nav={() => setNav(true)} />}
+        />
+        <Route
+          path='/album/:term'
+          element={<Album Nav={() => setNav(true)} />}
+        />
+        <Route
+          path='/album/track/:term'
+          element={<Track Nav={() => setNav(true)} />}
         />
         <Route
           path='/search/:term'
